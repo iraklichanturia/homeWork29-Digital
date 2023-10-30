@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  სთხოვეთ მომხმარებელს შემოიტანოს დადებითი რიცხვი 50 დან 100
+      //  მდე , იპოვეთ მომხმარებლის მიერ შემოტანილი რიცხვის გამყოფების
+      //  საშუალო არითმეტიკული და დაბეჭდეთ კონსოლში.
+
+      // Get the number from the user
+      let num = parseInt(prompt("Enter a number:"));
+
+      // Initialize variables to store the divisors and their sum
+      let divisors = [];
+      let divisorsSum = 0;
+
+      // Find the divisors of the number
+      for (let i = 1; i <= num; i++) {
+        if (num % i === 0) {
+          divisors.push(i);
+          divisorsSum += i;
+        }
+      }
+
+      // Calculate the arithmetic average
+      const average = divisorsSum / divisors.length;
+
+      // Print the divisors and their average
+      console.log("Divisors of", num, "are:", divisors);
+      console.log("Arithmetic Average of the divisors:", average);
+    </script>
+  </body>
+</html>
