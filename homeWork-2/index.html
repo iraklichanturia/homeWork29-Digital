@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      2. თხოვეთ მომხმარებელს შემოიტანოს 3 რიცხვი 70 დან 140 მდე შუალედში,
+      დაითვალეთ ყველა რიცხვის გამოყოვების რაოდენობა და დაბეჭდეთ კონსოლში ის
+      რიცხვი რომელსაც ყველაზე მეტი გამყოფი ეყოლება
+    </p>
+    <script>
+    //   //get the number from the user from 70 to 140
+    //   let userNum1 = Number(prompt("Enter first number from range 70 -140"));
+    //   let userNum2 = Number(prompt("Enter second number from range 70 - 140"));
+    //   let userNum3 = Number(prompt("Enter third number from range 70 - 140"));
+
+    //   let num1 = [];
+    //   let num2 = [];
+    //   let num3 = [];
+
+    //   for (let i = 1; i <= userNum1; i++) {
+    //     if (userNum1 % i === 0) {
+    //       num1.push(i);
+    //     }
+    //   }
+    //   for (let j = 1; j <= userNum2; j++) {
+    //     if (userNum2 % j === 0) {
+    //       num2.push(j);
+    //     }
+    //   }
+    //   for (let k = 1; k <= userNum3; k++) {
+    //     if (userNum3 % k === 0) {
+    //       num3.push(k);
+    //     }
+    //   }
+    //   // find which number have more divisors
+    //   if (Math.max(num1.length, num2.length, num3.length) == num1.length) {
+    //     console.log(userNum1);
+    //   } else if (
+    //     Math.max(num1.length, num2.length, num3.length) == num2.length
+    //   ) {
+    //     console.log(userNum2);
+    //   } else {
+    //     console.log(userNum3);
+    //   }
+
+    //   console.log(`Divisors for ${userNum1} ` + num1.length);
+    //   console.log(`Divisors for ${userNum2} ` + num2.length);
+    //   console.log(`Divisors for ${userNum3} ` + num3.length);
+    // Function to find the number of divisors for a given number
+function countDivisors(number) {
+  let count = 0;
+  for (let i = 1; i <= number; i++) {
+    if (number % i === 0) {
+      count++;
+    }
+  }
+  return count;
+}
+
+// Initialize variables to keep track of the number with the most divisors
+let numberWithMostDivisors;
+let maxDivisorCount = 0;
+
+// Ask the user to enter 3 numbers between 70 and 140
+for (let i = 1; i <= 4; i++) {
+  let userNumber;
+  do {
+    userNumber = parseInt(prompt(`Enter number ${i} (between 70 and 140):`));
+  } while (userNumber < 70 || userNumber > 140);
+
+  const divisorsCount = countDivisors(userNumber);
+  console.log(`Number ${i} has ${divisorsCount} divisors.`);
+
+  if (divisorsCount > maxDivisorCount) {
+    maxDivisorCount = divisorsCount;
+    numberWithMostDivisors = userNumber;
+  }
+}
+
+// Print the number with the most divisors
+console.log(`The number with the most divisors is ${numberWithMostDivisors} with ${maxDivisorCount} divisors.`);
+
+    </script>
+  </body>
+</html>
