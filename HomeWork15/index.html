@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      15. თხოვეთ მომხმარებელს შემოიტანოს სამკუთხედის ერთ -ერთ გვერდში არსებული
+      ფიფქების რაოდენობა და დაბეჭდეთ კონსოლშ მსგავსი პროპორციების სამკითხედი
+    </h1>
+    <script>
+      let numAsterisks = parseInt(prompt("enter number of asterisks"));
+      let triangle = "";
+      for (let i = 1; i <= numAsterisks; i++) {
+        for (let j = 1; j <= i; j++) {
+          triangle += "* ";
+        }
+        triangle += "\n";
+      }
+      console.log(triangle);
+    </script>
+  </body>
+</html>
