@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">თხოვეთ მომხმარებელს შემოიტანოს მართკუთხა სამკუთხედის
+        კათეტები, დაითვალეთ რას უდრის ჰიპოტენუზა</h1>
+
+        <script>
+            let a;
+            let b;
+            do {
+                a = Number(prompt("Enter a first catheter size..."));
+                b = Number(prompt("Enter a second catheter size..."));
+            }while (isNaN(a) || isNaN(b));
+
+            const hypotenuse = Math.sqrt(a * a + b * b);
+            console.log("hypotenuse: " + hypotenuse);
+
+        </script>
+</body>
+</html>
